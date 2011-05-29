@@ -1,0 +1,256 @@
+<ActionTemplates>
+  <Action>
+      <Name>Timer.CreateTimer</Name>
+      <Description>Creates a new timer.</Description>
+      <ReturnValueType>boolean</ReturnValueType>
+      <Arguments>
+         <Arg>
+            <Name>Name</Name>
+            <Description>The name of the new timer.</Description>
+            <Type>string</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"Timer1"</Default>
+               <DataType>string</DataType>
+               <Constraints>1,*</Constraints>
+            </EasyMode>
+         </Arg>
+         <Arg>
+            <Name>Interval</Name>
+            <Description>How often for the timer to 'tick' in milliseconds.</Description>
+            <Type>number</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>5000</Default>
+               <DataType>number</DataType>
+               <Constraints>1,*</Constraints>
+            </EasyMode>
+         </Arg>
+         <Arg>
+            <Name>Repetitions</Name>
+            <Description>How many times the timer will be allowed to execute.</Description>
+            <Type>number</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>10</Default>
+               <DataType>number</DataType>
+               <Constraints>1,*</Constraints>
+            </EasyMode>
+         </Arg>
+         <Arg>
+            <Name>Function</Name>
+            <Description>The function to execute when the timer ticks.</Description>
+            <Type>function</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode />
+         </Arg>
+         <Arg>
+            <Name>Arguments</Name>
+            <Description>Arguments to pass to the function.</Description>
+            <Type>variant</Type>
+            <Default/>
+            <Required>0</Required>
+            <EasyMode />
+         </Arg>
+      </Arguments>
+   </Action>
+  <Action>
+      <Name>Timer.DeleteTimer</Name>
+      <Description>Deletes an existing timer.</Description>
+      <ReturnValueType>boolean</ReturnValueType>
+      <Arguments>
+         <Arg>
+            <Name>Name</Name>
+            <Description>The name of the timer to delete.</Description>
+            <Type>string</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"Timer1"</Default>
+               <DataType>string</DataType>
+               <Constraints>1,*</Constraints>
+            </EasyMode>
+         </Arg>
+      </Arguments>
+   </Action>
+  <Action>
+      <Name>Timer.DoesExist</Name>
+      <Description>Checks if a timer exists.</Description>
+      <ReturnValueType>boolean</ReturnValueType>
+      <Arguments>
+         <Arg>
+            <Name>Name</Name>
+            <Description>The name of the timer.</Description>
+            <Type>string</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"Timer1"</Default>
+               <DataType>string</DataType>
+               <Constraints>1,*</Constraints>
+            </EasyMode>
+         </Arg>
+      </Arguments>
+   </Action>
+  <Action>
+      <Name>Timer.StartTimer</Name>
+      <Description>Start an existing timer.</Description>
+      <ReturnValueType>boolean</ReturnValueType>
+      <Arguments>
+         <Arg>
+            <Name>Name</Name>
+            <Description>The name of the timer to start.</Description>
+            <Type>string</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"Timer1"</Default>
+               <DataType>string</DataType>
+               <Constraints>1,*</Constraints>
+            </EasyMode>
+         </Arg>
+      </Arguments>
+   </Action>
+  <Action>
+      <Name>Timer.PauseTimer</Name>
+      <Description>Pause an existing running timer.</Description>
+      <ReturnValueType>boolean</ReturnValueType>
+      <Arguments>
+         <Arg>
+            <Name>Name</Name>
+            <Description>The name of the timer to pause.</Description>
+            <Type>string</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"Timer1"</Default>
+               <DataType>string</DataType>
+               <Constraints>1,*</Constraints>
+            </EasyMode>
+         </Arg>
+      </Arguments>
+   </Action>
+  <Action>
+      <Name>Timer.SetInterval</Name>
+      <Description>Sets the interval time of an existing timer.</Description>
+      <ReturnValueType>boolean</ReturnValueType>
+      <Arguments>
+         <Arg>
+            <Name>Name</Name>
+            <Description>The name of the timer to modify.</Description>
+            <Type>string</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"Timer1"</Default>
+               <DataType>string</DataType>
+               <Constraints>1,*</Constraints>
+            </EasyMode>
+         </Arg>
+         <Arg>
+            <Name>Interval</Name>
+            <Description>The new value for the tick interval in milliseconds.</Description>
+            <Type>number</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>7000</Default>
+               <DataType>number</DataType>
+               <Constraints>1,*</Constraints>
+            </EasyMode>
+         </Arg>
+      </Arguments>
+   </Action>
+  <Action>
+      <Name>Timer.SetMaxTicks</Name>
+      <Description>Sets the max amounts of repetitions for an existing timer.</Description>
+      <ReturnValueType>boolean</ReturnValueType>
+      <Arguments>
+         <Arg>
+            <Name>Name</Name>
+            <Description>The name of the timer to modify.</Description>
+            <Type>string</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"Timer1"</Default>
+               <DataType>string</DataType>
+               <Constraints>1,*</Constraints>
+            </EasyMode>
+         </Arg>
+         <Arg>
+            <Name>Repetitions</Name>
+            <Description>The maximum amount of repetitions for this timer.</Description>
+            <Type>number</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>25</Default>
+               <DataType>number</DataType>
+               <Constraints>1,*</Constraints>
+            </EasyMode>
+         </Arg>
+      </Arguments>
+   </Action>
+  <Action>
+      <Name>Timer.GetInformation</Name>
+      <Description>Gets information about an existing timer.</Description>
+      <ReturnValueType>table</ReturnValueType>
+      <Arguments>
+         <Arg>
+            <Name>Name</Name>
+            <Description>The name of the timer to grab information from.</Description>
+            <Type>string</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"Timer1"</Default>
+               <DataType>string</DataType>
+               <Constraints>1,*</Constraints>
+            </EasyMode>
+         </Arg>
+      </Arguments>
+   </Action>
+  <Action>
+      <Name>Timer.ResetTimer</Name>
+      <Description>Sets the maximum amount of repetitions back to zero for an existing timer.</Description>
+      <ReturnValueType>boolean</ReturnValueType>
+      <Arguments>
+         <Arg>
+            <Name>Name</Name>
+            <Description>The name of the timer to reset.</Description>
+            <Type>string</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"Timer1"</Default>
+               <DataType>string</DataType>
+               <Constraints>1,*</Constraints>
+            </EasyMode>
+         </Arg>
+      </Arguments>
+   </Action>
+  <Action>
+      <Name>Timer.ToggleTimer</Name>
+      <Description>Pauses an existing running timer or starts an existing paused timer.</Description>
+      <ReturnValueType>boolean</ReturnValueType>
+      <Arguments>
+         <Arg>
+            <Name>Name</Name>
+            <Description>The name of the timer to toggle.</Description>
+            <Type>string</Type>
+            <Default/>
+            <Required>1</Required>
+            <EasyMode>
+               <Default>"Timer1"</Default>
+               <DataType>string</DataType>
+               <Constraints>1,*</Constraints>
+            </EasyMode>
+         </Arg>
+      </Arguments>
+   </Action>
+</ActionTemplates>

@@ -1,0 +1,4 @@
+Timer Actions Plugin
+Created by Illusion Programming
+Copyright © 2011 Illusion Programming
+http://www.gensokyo.co.uk
